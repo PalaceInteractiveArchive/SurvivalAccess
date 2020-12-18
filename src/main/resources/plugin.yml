@@ -1,0 +1,5 @@
+name: SurvivalAccess
+version: 1.0.0
+author: PalaceDev
+main: network.palace.survivalaccess.SurvivalAccess
+api-version: 1.13
