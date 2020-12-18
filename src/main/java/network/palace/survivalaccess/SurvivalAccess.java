@@ -82,9 +82,9 @@ public class SurvivalAccess extends JavaPlugin implements Listener {
             if (rank == null || (!rank.equals(Rank.SHAREHOLDER) && rank.getRankId() < Rank.MOD.getRankId())) {
                 Bukkit.getLogger().info("SurvivalAccess > Blocked login for " + uuid.toString());
                 event.setLoginResult(AsyncPlayerPreLoginEvent.Result.KICK_OTHER);
-                event.setKickMessage(ChatColor.AQUA + "This server is only available to " + ChatColor.GREEN + "Staff Members " +
-                        ChatColor.AQUA + "and " + ChatColor.LIGHT_PURPLE + "Shareholders!\n" + ChatColor.AQUA + "Upgrade to " +
-                        ChatColor.LIGHT_PURPLE + "Shareholder " + ChatColor.AQUA + "at " + ChatColor.YELLOW + "https://store.palace.network");
+                event.setKickMessage(ChatColor.WHITE + "This server is only available to " + ChatColor.GREEN + "staff members " +
+                        ChatColor.WHITE + "and " + ChatColor.LIGHT_PURPLE + "Shareholders!\n" + ChatColor.WHITE + "Upgrade to " +
+                        ChatColor.LIGHT_PURPLE + "Shareholder " + ChatColor.WHITE + "at " + ChatColor.YELLOW + "https://store.palace.network");
             } else {
                 // allowed
                 event.setLoginResult(AsyncPlayerPreLoginEvent.Result.ALLOWED);
@@ -93,7 +93,7 @@ public class SurvivalAccess extends JavaPlugin implements Listener {
         } catch (Exception e) {
             Bukkit.getLogger().severe("SurvivalAccess > Failed to check login for " + uuid.toString() + ", blocked login");
             event.setLoginResult(AsyncPlayerPreLoginEvent.Result.KICK_OTHER);
-            event.setKickMessage(ChatColor.LIGHT_PURPLE + "SurvivalAccess" + ChatColor.AQUA + " > " + ChatColor.RED + "Error verifying access, please try again in a few minutes.");
+            event.setKickMessage(ChatColor.RED + "Error verifying Survival access. Please try again in a few minutes.");
         }
     }
 }
