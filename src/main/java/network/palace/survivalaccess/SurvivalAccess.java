@@ -79,7 +79,7 @@ public class SurvivalAccess extends JavaPlugin implements Listener {
 
             Rank rank = Rank.fromString(doc.getString("rank"));
 
-            if (rank == null || (!rank.equals(Rank.SHAREHOLDER) && rank.getRankId() < Rank.MOD.getRankId())) {
+            if (rank == null || (!rank.equals(Rank.SHAREHOLDER) && rank.getRankId() < Rank.TRAINEE.getRankId())) {
                 Bukkit.getLogger().info("SurvivalAccess > Blocked login for " + uuid.toString());
                 event.setLoginResult(AsyncPlayerPreLoginEvent.Result.KICK_OTHER);
                 event.setKickMessage(ChatColor.WHITE + "This server is only available to " + ChatColor.GREEN + "staff members " +
